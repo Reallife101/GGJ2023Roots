@@ -1173,6 +1173,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4592906845734614131, guid: 9dd1aa3a8440a254cb395d3ed345abf8, type: 3}
+      propertyPath: menu
+      value: 
+      objectReference: {fileID: 8836353019633679779}
     - target: {fileID: 4592906846123898122, guid: 9dd1aa3a8440a254cb395d3ed345abf8, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1243,6 +1247,11 @@ Transform:
 --- !u!4 &4640834953893439536 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4592906846123898122, guid: 9dd1aa3a8440a254cb395d3ed345abf8, type: 3}
+  m_PrefabInstance: {fileID: 9212894499865648442}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8836353019633679779 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 395136979631825049, guid: 9dd1aa3a8440a254cb395d3ed345abf8, type: 3}
   m_PrefabInstance: {fileID: 9212894499865648442}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9212894499926493796

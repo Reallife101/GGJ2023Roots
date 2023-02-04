@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
+using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {
@@ -66,10 +67,15 @@ public class GameManager : MonoBehaviour
 
     public void RestartLevel()
     {
+
         if(currentCoroutine != null)
         {
             StopCoroutine(currentCoroutine);
         }
+
+        menu.SetActive(false);
+        Time.timeScale = 1;
+
         currentCoroutine = StartCoroutine(LoadLevel(SceneManager.GetActiveScene().name));
     }
 
@@ -90,5 +96,12 @@ public class GameManager : MonoBehaviour
     {
         restart.Disable();
         toggleMenu.Disable();
+    }
+
+
+    public void Exit() {
+        Debug.Log("QUITTING");
+        Application.Quit();
+    
     }
 }

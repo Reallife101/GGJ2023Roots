@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform groundedCheckObjectLeft;
     [SerializeField] private Transform groundedCheckObjectRight;
     [SerializeField] private LayerMask groundLayer;
+    private RaycastHit leftHit;
+    private RaycastHit RightHit;
 
     //Components
     private Rigidbody2D myRB;
@@ -53,11 +55,28 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Manage grounded state
-        bool isGroundedLeft = Physics2D.Linecast(transform.position, groundedCheckObjectLeft.position, groundLayer);
-        bool isGroundedRight = Physics2D.Linecast(transform.position, groundedCheckObjectRight.position, groundLayer);
+        RaycastHit2D resultL = Physics2D.Linecast(transform.position, groundedCheckObjectLeft.position, groundLayer);
+        RaycastHit2D resultR = Physics2D.Linecast(transform.position, groundedCheckObjectRight.position, groundLayer);
+        isGrounded = resultL || resultR;
 
-        isGrounded = isGroundedLeft || isGroundedRight;
+        if (isGrounded)
+        {
+            if (transform.parent != resultL.transform && transform.parent != resultL.transform)
+            {
+                transform.parent = null;
+                transform.localScale = new Vector3(1, 1, 1);
+            }
+            // only set player's parents to objects if they are on the Platform layer
+            if (resultL.transform.gameObject.layer == LayerMask.NameToLayer("Platform"))
+            {
+                transform.SetParent(resultL.transform, true);
+            }
+            else if (resultR.transform.gameObject.layer == LayerMask.NameToLayer("Platform"))
+            {
+                transform.SetParent(resultL.transform, true);
+            }
+        }
+        
 
         Movement();
     }

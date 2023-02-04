@@ -6,7 +6,7 @@ using UnityEngine;
 public class crumblePlatform : MonoBehaviour
 {
     [SerializeField]
-    SpriteRenderer platformSR;
+    GameObject platformSR;
     [SerializeField]
     Collider2D platformCollider;
 
@@ -28,7 +28,7 @@ public class crumblePlatform : MonoBehaviour
     IEnumerator WaitAndDisable(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
-        platformSR.enabled = false;
+        platformSR.SetActive(false);
         platformCollider.enabled = false;
         StartCoroutine("WaitAndEnable", respawnTime);
     }
@@ -36,7 +36,7 @@ public class crumblePlatform : MonoBehaviour
     IEnumerator WaitAndEnable(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
-        platformSR.enabled = true;
+        platformSR.SetActive(true);
         platformCollider.enabled = true;
         startDisable = false;
     }

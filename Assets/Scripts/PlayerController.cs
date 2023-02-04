@@ -135,4 +135,9 @@ public class PlayerController : MonoBehaviour
     {
         isDisabled = false;
     }
+
+    public bool getIsDisabled()
+    {
+        return isDisabled;
+    }
 }

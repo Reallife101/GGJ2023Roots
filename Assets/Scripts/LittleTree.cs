@@ -43,6 +43,6 @@ public class LittleTree : MonoBehaviour
             virtualCamera.Follow = parent.transform;
         }
         //Destroy(litteTree);
-        GetComponent<PlayerController>().enabled = false;
+        GetComponent<PlayerController>().Disable();
     }
 }

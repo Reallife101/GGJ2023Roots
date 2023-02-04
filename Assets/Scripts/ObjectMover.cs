@@ -13,10 +13,6 @@ public class ObjectMover : MonoBehaviour
     [SerializeField] private bool drop;
     [SerializeField] private bool notMove;
 
-    //spike variables for recognizing the object as a spike and have a damage output
-    [SerializeField] private bool spike;
-    [SerializeField] private int spikeDamage;
-
     //Rigidbody of the gameobject
     private Rigidbody2D rb;
 
@@ -58,10 +54,6 @@ public class ObjectMover : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            /*if (spike)
-            {
-                Player.player.ApplyDamage(spikeDamage);
-            }*/
             if (!drop && playerOn)
             {
                 PlatformTrigger();

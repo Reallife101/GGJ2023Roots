@@ -67,11 +67,11 @@ public class PlayerController : MonoBehaviour
                 transform.localScale = new Vector3(1, 1, 1);
             }
             // only set player's parents to objects if they are on the Platform layer
-            if (resultL != null && resultL.transform.gameObject.layer == LayerMask.NameToLayer("Platform"))
+            if (resultL.transform != null && resultL.transform.gameObject.layer == LayerMask.NameToLayer("Platform"))
             {
                 transform.SetParent(resultL.transform, true);
             }
-            else if (resultR != null && resultR.transform.gameObject.layer == LayerMask.NameToLayer("Platform"))
+            else if (resultR.transform != null && resultR.transform.gameObject.layer == LayerMask.NameToLayer("Platform"))
             {
                 transform.SetParent(resultL.transform, true);
             }

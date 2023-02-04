@@ -25,10 +25,6 @@ public class SwitchPlatform : MonoBehaviour
 
     public void TogglePlatform()
     {
-
-        if (!moveInProgress)
-        {
-            
             //If we have reached the final waypoint, loop back
             if (platformIndex == waypoints.Length - 1)
             {
@@ -46,7 +42,6 @@ public class SwitchPlatform : MonoBehaviour
             }
 
             currentCoroutine = StartCoroutine(Move(waypoints[platformIndex]));
-        }
     }
 
     private IEnumerator Move(Transform destination)

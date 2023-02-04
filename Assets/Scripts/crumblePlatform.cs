@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,11 +6,13 @@ using UnityEngine;
 public class crumblePlatform : MonoBehaviour
 {
     [SerializeField]
-    GameObject platform;
+    SpriteRenderer platformSR;
+    [SerializeField]
+    Collider2D platformCollider;
 
     private bool startDisable = false;
 
-    private float touchTime = 3f;
+    private float touchTime = 1f;
     private float respawnTime = 3f;
 
 
@@ -25,14 +28,16 @@ public class crumblePlatform : MonoBehaviour
     IEnumerator WaitAndDisable(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
-        platform.SetActive(false);
+        platformSR.enabled = false;
+        platformCollider.enabled = false;
         StartCoroutine("WaitAndEnable", respawnTime);
     }
 
     IEnumerator WaitAndEnable(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
-        platform.SetActive(true);
+        platformSR.enabled = true;
+        platformCollider.enabled = true;
         startDisable = false;
     }
 }

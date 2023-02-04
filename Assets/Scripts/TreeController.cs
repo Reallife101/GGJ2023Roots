@@ -1,12 +1,15 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class TreeController : MonoBehaviour
 {
     [SerializeField] private GameObject littleTree;
-    [SerializeField] private GameObject spawnPoint;
+    [SerializeField] private Transform spawnPoint;
+
+    private GameObject spawnedLittleTree;
 
     private bool spawned;
 
@@ -32,18 +35,18 @@ public class TreeController : MonoBehaviour
         if (!spawned)
         {
             ChangeSprite();
-            Instantiate(littleTree, spawnPoint.transform.position, Quaternion.identity);
-            spawned = true;
+            spawnedLittleTree = Instantiate(littleTree, spawnPoint.position, Quaternion.identity);
         }
         else 
         { 
             DespawnLittleTree();
-            spawned = false;
         }
+
+        spawned = !spawned;
     }
 
     private void DespawnLittleTree() {
-        littleTree.GetComponent<LittleTree>().Despawn();
+        littleTree.GetComponent<LittleTree>().Despawn(spawnedLittleTree);
     }
 
     private void ChangeSprite()

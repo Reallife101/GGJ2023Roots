@@ -14,27 +14,21 @@ public class LittleTree : MonoBehaviour
 
     }
 
-    private void Awake()
-    {
-        gameObject.SetActive(true);
-    }
-
     // Update is called once per frame
     void Update()
     {
         time -= Time.deltaTime;
 
         if (time >= 0) {
-            gameObject.transform.position += Vector3.right; 
+            transform.position += Vector3.right * Time.deltaTime; 
         }
 
 
     }
 
 
-
-    public void Despawn() { 
+    public void Despawn(GameObject litteTree) { 
             Debug.Log("Destroying Little Tree");
-            Destroy(gameObject);
+            Destroy(litteTree);
     }
 }

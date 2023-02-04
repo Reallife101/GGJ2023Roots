@@ -17,7 +17,7 @@ public class GDTFadeEffect : MonoBehaviour
     private Image blackImage;
     private float currentValue;
     private bool performEffect=false;
-    private bool finished = false;
+    public bool finished = false;
     private bool halfCycle;
     private bool goingToLast;
     void OnEnable()

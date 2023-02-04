@@ -29,6 +29,9 @@ public class PlayerController : MonoBehaviour
     //Components
     private Rigidbody2D myRB;
 
+    //Toogling Bool
+    private bool isDisabled;
+
     private void Awake()
     {
         myRB = GetComponent<Rigidbody2D>();
@@ -44,6 +47,8 @@ public class PlayerController : MonoBehaviour
                 myRB.AddForce(new Vector2(myRB.velocity.y, jumpPower * 25));
             }
         };
+
+        isDisabled = false;
     }
 
     // Start is called before the first frame update
@@ -55,6 +60,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         RaycastHit2D resultL = Physics2D.Linecast(transform.position, groundedCheckObjectLeft.position, groundLayer);
         RaycastHit2D resultR = Physics2D.Linecast(transform.position, groundedCheckObjectRight.position, groundLayer);
         isGrounded = resultL || resultR;
@@ -104,5 +110,20 @@ public class PlayerController : MonoBehaviour
     {
         playerMove.Disable();
         playerJump.Disable();
+    }
+
+
+    public void ToggleInput() {
+        if (isDisabled)
+        {
+            input.Player.Enable();
+        }
+        else
+        {
+            input.Player.Disable();
+        }
+
+        isDisabled = !isDisabled; 
+    
     }
 }

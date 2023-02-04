@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5837063581428562982}
   - component: {fileID: 5837063581428562983}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,9 +128,9 @@ GameObject:
   - component: {fileID: -8067857023690319118}
   - component: {fileID: 8771469789398793746}
   - component: {fileID: 7722734791447046201}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LittleTree
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -165,6 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3c0313b0d2d6c4fb8fce173cc3fdb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  virtualCamera: {fileID: 0}
 --- !u!114 &-8067857023690319118
 MonoBehaviour:
   m_ObjectHideFlags: 0

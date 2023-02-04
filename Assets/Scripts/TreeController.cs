@@ -11,6 +11,8 @@ public class TreeController : MonoBehaviour
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private CinemachineVirtualCamera virtualCamera;
 
+    public int numChildrenLeft;
+
     private GameObject spawnedLittleTree;
 
     private bool spawned;
@@ -30,13 +32,18 @@ public class TreeController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F)) {
 
             SpawnLittleTree();
-            GetComponent<PlayerController>().ToggleInput();
-            Debug.Log(virtualCamera.name);
         }
     }
 
 
     private void SpawnLittleTree() {
+        if (!spawned && numChildrenLeft == 0)
+        {
+            return;
+        }
+
+        GetComponent<PlayerController>().ToggleInput();
+
         if (!spawned)
         {
             ChangeSprite();
@@ -47,8 +54,9 @@ public class TreeController : MonoBehaviour
             {
                 virtualCamera.Follow = spawnedLittleTree.transform;
             }
+            numChildrenLeft--;
         }
-        else 
+        else if (spawned)
         {
             DespawnLittleTree();
         }
@@ -75,7 +83,7 @@ public class TreeController : MonoBehaviour
 
         if (rb.constraints == RigidbodyConstraints2D.FreezeRotation)
         {
-            rb.constraints = RigidbodyConstraints2D.FreezeAll;
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
         }
         else
         {

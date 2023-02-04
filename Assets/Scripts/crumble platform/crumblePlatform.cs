@@ -15,6 +15,15 @@ public class crumblePlatform : MonoBehaviour
     private float touchTime = 1f;
     private float respawnTime = 3f;
 
+    [Header("Shake Values")]
+    private Vector3 startPosition;
+    [SerializeField] private float vibrationDistance;
+    [SerializeField] private float delayBetweenVibrations;
+
+    private void Awake()
+    {
+        startPosition = this.transform.position;
+    }
 
     public void platformTouch()
     {
@@ -32,6 +41,20 @@ public class crumblePlatform : MonoBehaviour
         {
             platformSR.color = new Color(1, 1, 1, Mathf.Lerp(1, 0, timeElapsed / waitTime));
             timeElapsed += Time.deltaTime;
+
+            //Vibrationing
+            Vector3 randomPos = startPosition + (UnityEngine.Random.insideUnitSphere * vibrationDistance);
+            this.transform.position = randomPos;
+            if (delayBetweenVibrations > 0)
+            {
+                timeElapsed += delayBetweenVibrations;
+                yield return new WaitForSeconds(delayBetweenVibrations);
+            }
+            else
+            {
+                yield return null;
+            }
+
             yield return null;
         }
         platformSR.color = new Color(1, 1, 1, 0);

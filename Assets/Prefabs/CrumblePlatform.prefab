@@ -120,6 +120,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platformSR: {fileID: 4015225864182747723}
   platformCollider: {fileID: 4015225863000320076}
+  vibrationDistance: 0.1
+  delayBetweenVibrations: 0.05
 --- !u!1 &4015225864182747725
 GameObject:
   m_ObjectHideFlags: 0

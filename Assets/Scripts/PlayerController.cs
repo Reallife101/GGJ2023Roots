@@ -23,8 +23,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform groundedCheckObjectLeft;
     [SerializeField] private Transform groundedCheckObjectRight;
     [SerializeField] private LayerMask groundLayer;
-    private RaycastHit leftHit;
-    private RaycastHit RightHit;
 
     //Components
     private Rigidbody2D myRB;
@@ -41,6 +39,11 @@ public class PlayerController : MonoBehaviour
 
         playerJump.started += jumpBehavior =>
         {
+            if (isDisabled)
+            {
+                return;
+            }
+
             //If grounded, jump normally
             if (isGrounded)
             {
@@ -89,6 +92,11 @@ public class PlayerController : MonoBehaviour
 
     private void Movement()
     {
+        if (isDisabled)
+        {
+            return;
+        }
+
         //Grounded movement
         movementVector = playerMove.ReadValue<Vector2>();
         if (movementVector.x != 0)
@@ -113,17 +121,18 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    public void ToggleInput() {
-        if (isDisabled)
-        {
-            input.Player.Enable();
-        }
-        else
-        {
-            input.Player.Disable();
-        }
-
+    public void ToggleInput() 
+    {
         isDisabled = !isDisabled; 
-    
+    }
+
+    public void Disable()
+    {
+        isDisabled = true;
+    }
+
+    public void Enable()
+    {
+        isDisabled = false;
     }
 }

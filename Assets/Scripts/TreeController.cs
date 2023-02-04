@@ -3,13 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
-using Cinemachine;
 
 public class TreeController : MonoBehaviour
 {
     [SerializeField] private GameObject littleTree;
     [SerializeField] private Transform spawnPoint;
-    [SerializeField] private CinemachineVirtualCamera virtualCamera;
 
     private GameObject spawnedLittleTree;
 
@@ -20,9 +18,7 @@ public class TreeController : MonoBehaviour
         //I'm guessing we are going to need this when we switch between Big Tree Statue and normal Tree 
         //SpriteRenderer treeSprtite = GetComponent<SpriteRenderer>();
         spawned = false;
-        virtualCamera = GameObject.FindGameObjectWithTag("Cinemachine").GetComponent<CinemachineVirtualCamera>();
-
-
+        
     }
 
     // Update is called once per frame
@@ -31,6 +27,7 @@ public class TreeController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F)) {
 
             SpawnLittleTree();
+            GetComponent<PlayerController>().ToggleInput(); 
         }
     }
 
@@ -40,26 +37,18 @@ public class TreeController : MonoBehaviour
         {
             ChangeSprite();
             spawnedLittleTree = Instantiate(littleTree, spawnPoint.position, Quaternion.identity);
-            spawnedLittleTree.GetComponent<LittleTree>().setParent(gameObject);
-
-            if (virtualCamera != null)
-            {
-                virtualCamera.Follow = spawnedLittleTree.transform;
-            }
-
-
         }
         else 
-        { 
+        {
             DespawnLittleTree();
         }
 
+        toggleFreezePosition();
         spawned = !spawned;
     }
 
     private void DespawnLittleTree() {
-        spawnedLittleTree.GetComponent<LittleTree>().Despawn();
-        spawnedLittleTree = null;
+        littleTree.GetComponent<LittleTree>().Despawn(spawnedLittleTree);
     }
 
     private void ChangeSprite()
@@ -69,6 +58,19 @@ public class TreeController : MonoBehaviour
 
     }
 
+    private void toggleFreezePosition()
+    {
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+
+        if (rb.constraints == RigidbodyConstraints2D.FreezeRotation)
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        }
+        else
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        }
+    }
 
 
 

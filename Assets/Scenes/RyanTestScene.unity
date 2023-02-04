@@ -1007,6 +1007,7 @@ GameObject:
   - component: {fileID: 1517470274}
   - component: {fileID: 1517470273}
   - component: {fileID: 1517470272}
+  - component: {fileID: 1517470275}
   m_Layer: 0
   m_Name: doorOn
   m_TagString: Untagged
@@ -1107,6 +1108,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1517470275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517470271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1394f6a875d8324b8a97d0ac26c33a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformSR: {fileID: 1517470273}
+  platformCollider: {fileID: 1517470272}
+  openTime: 0.3
 --- !u!1 &1560505306
 GameObject:
   m_ObjectHideFlags: 0
@@ -1118,6 +1134,7 @@ GameObject:
   - component: {fileID: 1560505309}
   - component: {fileID: 1560505308}
   - component: {fileID: 1560505307}
+  - component: {fileID: 1560505310}
   m_Layer: 0
   m_Name: doorOff
   m_TagString: Untagged
@@ -1218,6 +1235,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1560505310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560505306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1394f6a875d8324b8a97d0ac26c33a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformSR: {fileID: 1560505308}
+  platformCollider: {fileID: 1560505307}
+  openTime: 0.3
 --- !u!1 &1892689640
 GameObject:
   m_ObjectHideFlags: 0

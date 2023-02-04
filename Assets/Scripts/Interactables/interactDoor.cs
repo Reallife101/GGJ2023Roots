@@ -27,12 +27,47 @@ public class interactDoor : Interactable
     {
         foreach (GameObject go in offDefault)
         {
-            go.SetActive(switchOn);
+            doorScript sd = go.GetComponent<doorScript>();
+            
+            if (sd)
+            {
+                if (switchOn)
+                {
+                    sd.openDoor();
+                }
+                else
+                {
+                    sd.disableDoor();
+                }
+
+            }
+            else
+            {
+                go.SetActive(switchOn);
+            }
+
         }
 
         foreach (GameObject go in onDefault)
         {
-            go.SetActive(!switchOn);
+            doorScript sd = go.GetComponent<doorScript>();
+
+            if (sd)
+            {
+                if (!switchOn)
+                {
+                    sd.openDoor();
+                }
+                else
+                {
+                    sd.disableDoor();
+                }
+
+            }
+            else
+            {
+                go.SetActive(!switchOn);
+            }
         }
     }
 }

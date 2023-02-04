@@ -26,10 +26,17 @@ public abstract class Interactable : MonoBehaviour
     private void Update()
     {
         // Replace keycode later
-        if (triggerActive && Input.GetKeyDown(KeyCode.E))
+        if (triggerActive)
         {
-            interact();
+            //Add somesort of display later
+
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                interact();
+            }
         }
+
     }
 
 }

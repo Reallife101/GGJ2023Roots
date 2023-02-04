@@ -325,18 +325,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2242344196637411992, guid: c4848c568f031ad4d8ffcd133d33a520, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3091238992297366354, guid: c4848c568f031ad4d8ffcd133d33a520, type: 3}
-      propertyPath: jumpPower
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 4329474364039749694, guid: c4848c568f031ad4d8ffcd133d33a520, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.1
-      objectReference: {fileID: 0}
     - target: {fileID: 5944632119874796864, guid: c4848c568f031ad4d8ffcd133d33a520, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -384,14 +372,6 @@ PrefabInstance:
     - target: {fileID: 5944632119874796924, guid: c4848c568f031ad4d8ffcd133d33a520, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 5944632119874796926, guid: c4848c568f031ad4d8ffcd133d33a520, type: 3}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5944632119874796926, guid: c4848c568f031ad4d8ffcd133d33a520, type: 3}
-      propertyPath: m_UseAutoMass
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4848c568f031ad4d8ffcd133d33a520, type: 3}

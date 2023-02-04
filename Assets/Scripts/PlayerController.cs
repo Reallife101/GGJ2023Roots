@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
 
         if (isGrounded)
         {
-            if (transform.parent != resultL.transform && transform.parent != resultL.transform)
+            if (transform.parent != resultL.transform && transform.parent != resultR.transform)
             {
                 transform.parent = null;
                 transform.localScale = new Vector3(1, 1, 1);

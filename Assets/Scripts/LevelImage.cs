@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class LevelImage : ScriptableObject
 {
-    public Image image;
+    public Sprite image;
     public string image_name;
     public int level_index; 
 }

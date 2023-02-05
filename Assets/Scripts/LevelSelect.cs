@@ -80,7 +80,7 @@ public class LevelSelect : MonoBehaviour
 
     public void SwitchInfo()
     {
-        currentImage.color = levels[index].image.color;
+        currentImage.sprite = levels[index].image;
         level_name.text = levels[index].image_name;
     }
 

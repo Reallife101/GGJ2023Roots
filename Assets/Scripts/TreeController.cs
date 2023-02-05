@@ -65,6 +65,10 @@ public class TreeController : MonoBehaviour
         spawned = !spawned;
     }
 
+    public void incrementCount() {
+        numChildrenLeft++; 
+    }
+
     private void DespawnLittleTree() {
         spawnedLittleTree.GetComponent<LittleTree>().Despawn(spawnedLittleTree);
         spawnedLittleTree = null;

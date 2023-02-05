@@ -7,11 +7,14 @@ public abstract class Interactable : MonoBehaviour
     [SerializeField] private bool triggerActive = false;
     public abstract void interact();
 
+    private GameObject currentInside;
+
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && !other.GetComponent<PlayerController>().getIsDisabled())
         {
             triggerActive = true;
+            currentInside = other.gameObject;
             
         }
     }
@@ -27,6 +30,10 @@ public abstract class Interactable : MonoBehaviour
 
     private void Update()
     {
+        if (currentInside != null && currentInside.GetComponent<PlayerController>().getIsDisabled())
+        {
+            return;
+        }
         // Replace keycode later
         if (triggerActive)
         {

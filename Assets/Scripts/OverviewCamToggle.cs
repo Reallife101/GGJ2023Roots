@@ -10,7 +10,8 @@ public class OverviewCamToggle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        cam.enabled = true;
+        StartCoroutine("WaitAndDisable");
     }
 
     // Update is called once per frame
@@ -21,5 +22,12 @@ public class OverviewCamToggle : MonoBehaviour
             active = !active;
             cam.enabled = active;
         }
+    }
+
+    IEnumerator WaitAndDisable()
+    {
+        yield return new WaitForSeconds(2.5f);
+        active = false;
+        cam.enabled = active;
     }
 }

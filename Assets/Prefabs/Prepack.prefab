@@ -1208,8 +1208,6 @@ MonoBehaviour:
   nextLevel: RyanTestScene
   menu: {fileID: 395136979631825049}
   levelSelect: {fileID: 2298013928968102145}
-  treesUsedtext: {fileID: 2240948917134227038}
-  treesLeftText: {fileID: 4914930048608096710}
   levelSelector: {fileID: 3443284024033298722}
   levelTransition: {fileID: 8300000, guid: 10dd5c012cb4f1d45980c40b670bf139, type: 3}
   au: {fileID: 7350170407703854324}
@@ -3473,6 +3471,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4592906846123898122}
     m_Modifications:
+    - target: {fileID: 4842873077904168965, guid: c4848c568f031ad4d8ffcd133d33a520, type: 3}
+      propertyPath: treesLeftText
+      value: 
+      objectReference: {fileID: 4914930048608096710}
+    - target: {fileID: 4842873077904168965, guid: c4848c568f031ad4d8ffcd133d33a520, type: 3}
+      propertyPath: treesUsedtext
+      value: 
+      objectReference: {fileID: 2240948917134227038}
     - target: {fileID: 5944632119874796864, guid: c4848c568f031ad4d8ffcd133d33a520, type: 3}
       propertyPath: m_RootOrder
       value: 2

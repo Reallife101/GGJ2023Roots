@@ -11,8 +11,8 @@ public class TreeController : MonoBehaviour
     [SerializeField] private GameObject littleTree;
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private CinemachineVirtualCamera virtualCamera;
-    [SerializeField] private TMP_Text treesLeft;
-    [SerializeField] private TMP_Text treesDead;
+    public TMP_Text treesUsedtext;
+    public TMP_Text treesLeftText;
 
     public int numChildrenLeft;
 
@@ -45,6 +45,9 @@ public class TreeController : MonoBehaviour
 
             SpawnLittleTree();
         }
+
+        treesLeftText.text = numChildrenLeft.ToString();
+        treesUsedtext.text = UIManager.UImanager.deathCount.ToString();
     }
 
 
@@ -69,6 +72,7 @@ public class TreeController : MonoBehaviour
                 virtualCamera.Follow = spawnedLittleTree.transform;
             }
             numChildrenLeft--;
+            UIManager.UImanager.deathCount++;
         }
         else if (spawned)
         {

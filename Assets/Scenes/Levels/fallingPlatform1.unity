@@ -464,6 +464,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 362f38b468de69144bc6bc67abd29493, type: 3}
+--- !u!1001 &974436207
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 799339202321086899, guid: 60046cc9577c201429c0ad90a945ee23, type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 799339202321086899, guid: 60046cc9577c201429c0ad90a945ee23, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.4649997
+      objectReference: {fileID: 0}
+    - target: {fileID: 799339202321086899, guid: 60046cc9577c201429c0ad90a945ee23, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.0666666
+      objectReference: {fileID: 0}
+    - target: {fileID: 799339202321086899, guid: 60046cc9577c201429c0ad90a945ee23, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 799339202321086899, guid: 60046cc9577c201429c0ad90a945ee23, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 799339202321086899, guid: 60046cc9577c201429c0ad90a945ee23, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 799339202321086899, guid: 60046cc9577c201429c0ad90a945ee23, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 799339202321086899, guid: 60046cc9577c201429c0ad90a945ee23, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 799339202321086899, guid: 60046cc9577c201429c0ad90a945ee23, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 799339202321086899, guid: 60046cc9577c201429c0ad90a945ee23, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 799339202321086899, guid: 60046cc9577c201429c0ad90a945ee23, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 799339202321086909, guid: 60046cc9577c201429c0ad90a945ee23, type: 3}
+      propertyPath: m_Name
+      value: DeathTracker
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 60046cc9577c201429c0ad90a945ee23, type: 3}
 --- !u!1001 &1056790826
 PrefabInstance:
   m_ObjectHideFlags: 0

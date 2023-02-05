@@ -23,11 +23,14 @@ public class TreeController : MonoBehaviour
     [SerializeField]
     AudioSource au;
 
+    private Animator ai;
+
     void Start()
     {
         //I'm guessing we are going to need this when we switch between Big Tree Statue and normal Tree 
         //SpriteRenderer treeSprtite = GetComponent<SpriteRenderer>();
         spawned = false;
+        ai = GetComponent<Animator>();
         virtualCamera = GameObject.FindGameObjectWithTag("Cinemachine").GetComponent<CinemachineVirtualCamera>();
 
     }
@@ -53,6 +56,7 @@ public class TreeController : MonoBehaviour
         if (!spawned)
         {
             ChangeSprite();
+            ai.SetBool("tree", true);
             spawnedLittleTree = Instantiate(littleTree, spawnPoint.position, Quaternion.identity);
             spawnedLittleTree.GetComponent<LittleTree>().setParent(gameObject);
             au.PlayOneShot(spawnTree, 1f);
@@ -66,6 +70,7 @@ public class TreeController : MonoBehaviour
         else if (spawned)
         {
             DespawnLittleTree();
+            ai.SetBool("tree", false);
         }
 
         toggleFreezePosition();

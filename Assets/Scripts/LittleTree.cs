@@ -44,7 +44,7 @@ public class LittleTree : MonoBehaviour
             virtualCamera.Follow = parent.transform;
         }
 
-        if (WithinDistance(littleTree.transform))
+        if (WithinDistance(transform))
         {
             parent.GetComponent<TreeController>().incrementCount();
             Destroy(littleTree);

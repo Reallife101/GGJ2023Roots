@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b695e303867924399204624a1d5696, type: 3}
   m_Name: MountainofSmilingBodies
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
-  image_name: 
+  image: {fileID: 4034366977457224824, guid: 368c36b20dcb7f14dad055d2003de626, type: 3}
+  image_name: MountainofSmilingBodies
   level_index: 0

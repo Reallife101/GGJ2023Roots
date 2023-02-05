@@ -31,7 +31,6 @@ public class LevelSelect : MonoBehaviour
 
 
     private void IndexCheckDisplay() {
-        Debug.Log(index);
 
         if (index == 0)
         {

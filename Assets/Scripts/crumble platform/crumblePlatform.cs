@@ -46,7 +46,7 @@ public class crumblePlatform : MonoBehaviour
         float timeElapsed = 0;
         while (timeElapsed < waitTime)
         {
-            platformSR.color = new Color(1, 1, 1, Mathf.Lerp(1, 0, timeElapsed / waitTime));
+            platformSR.color = new Color(platformSR.color.r, platformSR.color.g, platformSR.color.b, Mathf.Lerp(1, 0, timeElapsed / waitTime));
             timeElapsed += Time.deltaTime;
 
             //Vibrationing
@@ -64,22 +64,23 @@ public class crumblePlatform : MonoBehaviour
 
             yield return null;
         }
-        platformSR.color = new Color(1, 1, 1, 0);
+        platformSR.color = new Color(platformSR.color.r, platformSR.color.g, platformSR.color.b, 0);
         platformCollider.enabled = false;
         StartCoroutine("WaitAndEnable", respawnTime);
     }
 
     IEnumerator WaitAndEnable(float waitTime)
     {
+        this.transform.position = startPosition;
         float timeElapsed = 0;
         yield return new WaitForSeconds(waitTime / 2);
         while (timeElapsed < waitTime/2)
         {
-            platformSR.color = new Color(1, 1, 1, Mathf.Lerp(0, 1, timeElapsed / waitTime));
+            platformSR.color = new Color(platformSR.color.r, platformSR.color.g, platformSR.color.b, Mathf.Lerp(0, 1, timeElapsed / waitTime));
             timeElapsed += Time.deltaTime;
             yield return null;
         }
-        platformSR.color = new Color(1, 1, 1, 1);
+        platformSR.color = new Color(platformSR.color.r, platformSR.color.g, platformSR.color.b, 1);
         platformCollider.enabled = true;
         startDisable = false;
     }

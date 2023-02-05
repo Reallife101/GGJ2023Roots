@@ -48,7 +48,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Top of the Head.unity
     guid: 47a56cf4a2bed8b44827a07cf1209524
   - enabled: 1
-    path: Assets/Scenes/Levels/Switches1.unity
+    path: Assets/Scenes/Levels/Underpass.unity
     guid: 0cee4a2e893898a49891185768d252a6
   - enabled: 1
     path: Assets/Scenes/Levels/The Droppa.unity
@@ -57,7 +57,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/TheWorldRevolving.unity
     guid: 6d3e55821444c4c4497a6a7d65b4a2dc
   - enabled: 1
-    path: Assets/Scenes/Levels/Through the Dark Twilight.unity
+    path: Assets/Scenes/Levels/The Munchies.unity
     guid: aa9efb0bfb4326a4ca822ee7cef05007
   - enabled: 1
     path: Assets/Scenes/Levels/Full Bloom.unity

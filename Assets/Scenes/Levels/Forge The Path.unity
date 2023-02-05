@@ -2869,7 +2869,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1414954436804944572, guid: f3af1d00bda9263408759a739a53b646, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.98
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4128123312987658965, guid: f3af1d00bda9263408759a739a53b646, type: 3}
       propertyPath: m_Color.b
@@ -2889,7 +2889,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4128123312987658966, guid: f3af1d00bda9263408759a739a53b646, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.29
+      value: 8.19
       objectReference: {fileID: 0}
     - target: {fileID: 4128123312987658966, guid: f3af1d00bda9263408759a739a53b646, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2931,13 +2931,32 @@ PrefabInstance:
       propertyPath: m_Name
       value: End Level
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4128123312987658968, guid: f3af1d00bda9263408759a739a53b646, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f3af1d00bda9263408759a739a53b646, type: 3}
 --- !u!4 &5084789327728153457 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4128123312987658966, guid: f3af1d00bda9263408759a739a53b646, type: 3}
   m_PrefabInstance: {fileID: 5084789327728153456}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5084789327728153458 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4128123312987658969, guid: f3af1d00bda9263408759a739a53b646, type: 3}
+  m_PrefabInstance: {fileID: 5084789327728153456}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5084789327728153459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5084789327728153458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ad766d61339c9e428c457419c631f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathCount: 0
 --- !u!1 &5219821470188282350
 GameObject:
   m_ObjectHideFlags: 3

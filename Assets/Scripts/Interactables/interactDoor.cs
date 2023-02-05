@@ -12,6 +12,11 @@ public class interactDoor : Interactable
     [SerializeField]
     private GameObject[] onDefault;
 
+    [SerializeField]
+    AudioClip ac;
+    [SerializeField]
+    AudioSource au;
+
     void Start()
     {
         flipSwitch();
@@ -25,6 +30,7 @@ public class interactDoor : Interactable
 
     private void flipSwitch()
     {
+        au.PlayOneShot(ac, .95f);
         foreach (GameObject go in offDefault)
         {
             doorScript sd = go.GetComponent<doorScript>();

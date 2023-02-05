@@ -139,6 +139,7 @@ public class GameManager : MonoBehaviour
     IEnumerator LoadLevel(int index)
     {
         levelEndFade.SetActive(true);
+        au.PlayOneShot(levelTransition, 1f);
         yield return new WaitForSeconds(levelEndFade.GetComponent<GDTFadeEffect>().timeEffect);
         SceneManager.LoadScene(index);
     }

@@ -23,7 +23,6 @@ public class LittleTree : MonoBehaviour
         //for when we need to use this later on
         //sprite = GetComponent<SpriteRenderer>();
         virtualCamera = GameObject.FindGameObjectWithTag("Cinemachine").GetComponent<CinemachineVirtualCamera>();
-        Debug.Log(virtualCamera);
 
     }
 

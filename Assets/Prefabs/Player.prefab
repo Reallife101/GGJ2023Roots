@@ -211,6 +211,11 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  footsteps:
+  - {fileID: 8300000, guid: 01713117ee76da346a11f42b275d010e, type: 3}
+  - {fileID: 8300000, guid: a788f299a49d60040866863217fbc937, type: 3}
+  - {fileID: 8300000, guid: e58d2183c33c11146a6f8118b275308e, type: 3}
+  - {fileID: 8300000, guid: 86b3d5f496369264e9d13ad340ac0277, type: 3}
 --- !u!114 &4842873077904168965
 MonoBehaviour:
   m_ObjectHideFlags: 0

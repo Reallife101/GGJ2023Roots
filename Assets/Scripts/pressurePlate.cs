@@ -13,6 +13,12 @@ public class pressurePlate : MonoBehaviour
     [SerializeField]
     private GameObject[] onDefault;
 
+    [SerializeField]
+    AudioClip plate;
+
+    [SerializeField]
+    AudioSource au;
+
     void Start()
     {
         flipSwitch();
@@ -27,6 +33,7 @@ public class pressurePlate : MonoBehaviour
 
     private void flipSwitch()
     {
+        au.PlayOneShot(plate, 1f);
         foreach (GameObject go in offDefault)
         {
             doorScript sd = go.GetComponent<doorScript>();

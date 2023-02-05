@@ -20,6 +20,12 @@ public class crumblePlatform : MonoBehaviour
     [SerializeField] private float vibrationDistance;
     [SerializeField] private float delayBetweenVibrations;
 
+    [SerializeField]
+    AudioClip fall;
+
+    [SerializeField]
+    AudioSource au;
+
     private void Awake()
     {
         startPosition = this.transform.position;
@@ -30,6 +36,7 @@ public class crumblePlatform : MonoBehaviour
         if (!startDisable)
         {
             startDisable = true;
+            au.PlayOneShot(fall, 1f);
             StartCoroutine("WaitAndDisable", touchTime);
         }
     }

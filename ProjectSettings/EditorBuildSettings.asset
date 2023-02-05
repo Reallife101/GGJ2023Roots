@@ -6,11 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/Josh_Scene.unity
-    guid: f210bf75d2b0abf4c9d8dcd9590c18b1
+    path: Assets/Scenes/Levels/StartMenu.unity
+    guid: 631afb940f59cc34abea8df04b6b520a
   - enabled: 1
     path: Assets/Scenes/Levels/L1.unity
     guid: 404af57d448a2394fae36fb65b7fed12

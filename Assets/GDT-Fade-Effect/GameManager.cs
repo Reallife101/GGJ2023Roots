@@ -88,8 +88,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void LevelSelect() {
-        menuActive = !menuActive;
-        menu.SetActive(menuActive);
+        menu.SetActive(false);
         levelSelect.SetActive(true);
         levelSelector.Restart();
     }
@@ -112,7 +111,7 @@ public class GameManager : MonoBehaviour
         {
             StopCoroutine(currentCoroutine);
         }
-        currentCoroutine = StartCoroutine(LoadLevel(nextLevel));
+        currentCoroutine = StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
     public void RestartLevel()
@@ -136,6 +135,14 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(levelEndFade.GetComponent<GDTFadeEffect>().timeEffect);
         SceneManager.LoadScene(sceneToLoad);
     }
+
+    IEnumerator LoadLevel(int index)
+    {
+        levelEndFade.SetActive(true);
+        yield return new WaitForSeconds(levelEndFade.GetComponent<GDTFadeEffect>().timeEffect);
+        SceneManager.LoadScene(index);
+    }
+
 
     private void OnEnable()
     {

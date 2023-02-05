@@ -190,6 +190,11 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  footsteps:
+  - {fileID: 8300000, guid: b43a8afb2fbe53442992117c4d8c5615, type: 3}
+  - {fileID: 8300000, guid: 142133fd8c01ec147b229ba0b3d081d3, type: 3}
+  - {fileID: 8300000, guid: 822c7c2045e690f45a0fa6a8f40014c9, type: 3}
+  - {fileID: 8300000, guid: dd4039e0a75580e43a410a69988a5426, type: 3}
 --- !u!50 &8771469789398793746
 Rigidbody2D:
   serializedVersion: 4

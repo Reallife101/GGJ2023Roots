@@ -35,7 +35,6 @@ public class LevelSelect : MonoBehaviour
         if (index == 0)
         {
             BtnDisplay(backBtn);
-            BtnDisplay(nextBtn);
 
         }
         else { 

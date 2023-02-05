@@ -9,66 +9,66 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/StartMenu.unity
     guid: 631afb940f59cc34abea8df04b6b520a
   - enabled: 1
-    path: Assets/Scenes/Levels/deadbody slide.unity
-    guid: 5dbe3d5db0754f947b95ea1b13fdbadb
-  - enabled: 1
-    path: Assets/Scenes/Levels/Falling Platforms.unity
-    guid: 25691aaeb0609dc41b179ce2800af125
-  - enabled: 1
-    path: Assets/Scenes/Levels/Crumble and Tumble.unity
-    guid: 1939d889737c30343b5b8b832d7ab831
-  - enabled: 1
-    path: Assets/Scenes/Levels/Forge The Path.unity
-    guid: 194bca7e9e5b5e540b9194adcc5a350c
-  - enabled: 1
-    path: Assets/Scenes/Levels/Form A Bridge.unity
-    guid: db01351adacd8df40a87b84d8c849996
-  - enabled: 1
-    path: Assets/Scenes/Levels/I Adrore Doors.unity
-    guid: b6b76ce8f37c5b443b983a8309f79e1b
-  - enabled: 1
-    path: Assets/Scenes/Levels/MountainofSmilingBodies.unity
-    guid: 141ee4d1afc748b408dc4d429659c8c9
-  - enabled: 1
-    path: Assets/Scenes/Levels/On Thin Ice.unity
-    guid: 1a12869c29a97d54cbb2b8434e3c7455
-  - enabled: 1
-    path: Assets/Scenes/Levels/Pressure Lock.unity
-    guid: f55ed77391e7ce24a97cb929d672e8f0
-  - enabled: 1
-    path: Assets/Scenes/Levels/Time to Move.unity
-    guid: 866e0790daece4243ad9c927b7d2103a
-  - enabled: 1
-    path: Assets/Scenes/Levels/RiseToTheOccasion.unity
-    guid: 4b68fd6731845ee4f9b8c0b0ce34ebda
-  - enabled: 1
-    path: Assets/Scenes/Levels/SeeingDouble.unity
-    guid: 885a74e568d3147419d1dca3ec817fe8
-  - enabled: 1
-    path: Assets/Scenes/Levels/Top of the Head.unity
-    guid: 47a56cf4a2bed8b44827a07cf1209524
-  - enabled: 1
-    path: Assets/Scenes/Levels/Underpass.unity
-    guid: 0cee4a2e893898a49891185768d252a6
-  - enabled: 1
-    path: Assets/Scenes/Levels/The Droppa.unity
-    guid: 702e574f7ab750544aefd65874b394af
-  - enabled: 1
-    path: Assets/Scenes/Levels/TheWorldRevolving.unity
-    guid: 6d3e55821444c4c4497a6a7d65b4a2dc
-  - enabled: 1
-    path: Assets/Scenes/Levels/The Munchies.unity
-    guid: aa9efb0bfb4326a4ca822ee7cef05007
-  - enabled: 1
-    path: Assets/Scenes/Levels/Full Bloom.unity
-    guid: f22010d6ee49fbe47b15560370683cc9
-  - enabled: 1
-    path: Assets/Scenes/Levels/Death to Love.unity
-    guid: 20d541cf649789b49be301f9b053074a
-  - enabled: 1
     path: Assets/Scenes/Levels/Waking up.unity
     guid: 265179f6db4f1c149a9837f68cc0a894
   - enabled: 1
     path: Assets/Scenes/Levels/A Door too Low.unity
     guid: 4fc2479542464dc4796a8e062fcb3802
+  - enabled: 1
+    path: Assets/Scenes/Levels/Death to Love.unity
+    guid: 20d541cf649789b49be301f9b053074a
+  - enabled: 1
+    path: Assets/Scenes/Levels/Form A Bridge.unity
+    guid: db01351adacd8df40a87b84d8c849996
+  - enabled: 1
+    path: Assets/Scenes/Levels/Crumble and Tumble.unity
+    guid: 1939d889737c30343b5b8b832d7ab831
+  - enabled: 1
+    path: Assets/Scenes/Levels/Underpass.unity
+    guid: 0cee4a2e893898a49891185768d252a6
+  - enabled: 1
+    path: Assets/Scenes/Levels/Time to Move.unity
+    guid: 866e0790daece4243ad9c927b7d2103a
+  - enabled: 1
+    path: Assets/Scenes/Levels/Top of the Head.unity
+    guid: 47a56cf4a2bed8b44827a07cf1209524
+  - enabled: 1
+    path: Assets/Scenes/Levels/Pressure Lock.unity
+    guid: f55ed77391e7ce24a97cb929d672e8f0
+  - enabled: 1
+    path: Assets/Scenes/Levels/The Munchies.unity
+    guid: aa9efb0bfb4326a4ca822ee7cef05007
+  - enabled: 1
+    path: Assets/Scenes/Levels/TheWorldRevolving.unity
+    guid: 6d3e55821444c4c4497a6a7d65b4a2dc
+  - enabled: 1
+    path: Assets/Scenes/Levels/The Droppa.unity
+    guid: 702e574f7ab750544aefd65874b394af
+  - enabled: 1
+    path: Assets/Scenes/Levels/Full Bloom.unity
+    guid: f22010d6ee49fbe47b15560370683cc9
+  - enabled: 1
+    path: Assets/Scenes/Levels/SeeingDouble.unity
+    guid: 885a74e568d3147419d1dca3ec817fe8
+  - enabled: 1
+    path: Assets/Scenes/Levels/RiseToTheOccasion.unity
+    guid: 4b68fd6731845ee4f9b8c0b0ce34ebda
+  - enabled: 1
+    path: Assets/Scenes/Levels/I Adrore Doors.unity
+    guid: b6b76ce8f37c5b443b983a8309f79e1b
+  - enabled: 1
+    path: Assets/Scenes/Levels/Strike!.unity
+    guid: 5dbe3d5db0754f947b95ea1b13fdbadb
+  - enabled: 1
+    path: Assets/Scenes/Levels/On Thin Ice.unity
+    guid: 1a12869c29a97d54cbb2b8434e3c7455
+  - enabled: 1
+    path: Assets/Scenes/Levels/Falling Platforms.unity
+    guid: 25691aaeb0609dc41b179ce2800af125
+  - enabled: 1
+    path: Assets/Scenes/Levels/MountainofSmilingBodies.unity
+    guid: 141ee4d1afc748b408dc4d429659c8c9
+  - enabled: 1
+    path: Assets/Scenes/Levels/Forge The Path.unity
+    guid: 194bca7e9e5b5e540b9194adcc5a350c
   m_configObjects: {}

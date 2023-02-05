@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b695e303867924399204624a1d5696, type: 3}
   m_Name: Waking up
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 3ebb91e01f19796408a839361e3db349, type: 3}
   image_name: Waking Up
   level_index: 0

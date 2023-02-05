@@ -410,6 +410,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Children can interact
 
+    Press F again to shrivel
+
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8cb8d38d6d8ce474493878f10d0d594c, type: 2}
@@ -437,8 +439,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 1
-  m_fontSizeBase: 1
+  m_fontSize: 0.8
+  m_fontSizeBase: 0.8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

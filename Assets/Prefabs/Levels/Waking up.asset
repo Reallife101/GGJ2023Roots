@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Waking up
   m_EditorClassIdentifier: 
   image: {fileID: 0}
-  image_name: 
+  image_name: Waking Up
   level_index: 0

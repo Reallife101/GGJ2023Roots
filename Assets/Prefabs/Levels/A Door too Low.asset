@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: A Door too Low
   m_EditorClassIdentifier: 
   image: {fileID: 0}
-  image_name: 
+  image_name: A Door too Low
   level_index: 0

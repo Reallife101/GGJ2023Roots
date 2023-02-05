@@ -69,6 +69,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Waking up.unity
     guid: 265179f6db4f1c149a9837f68cc0a894
   - enabled: 1
-    path: Assets/Scenes/Levels/A Door to Low.unity
+    path: Assets/Scenes/Levels/A Door too Low.unity
     guid: 4fc2479542464dc4796a8e062fcb3802
   m_configObjects: {}

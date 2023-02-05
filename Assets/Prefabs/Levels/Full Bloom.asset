@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Full Bloom
   m_EditorClassIdentifier: 
   image: {fileID: 0}
-  image_name: 
+  image_name: Full Bloom
   level_index: 0

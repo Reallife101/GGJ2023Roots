@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Death to Love
   m_EditorClassIdentifier: 
   image: {fileID: 0}
-  image_name: 
+  image_name: Death to Love
   level_index: 0

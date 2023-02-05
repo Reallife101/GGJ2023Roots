@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b695e303867924399204624a1d5696, type: 3}
   m_Name: Death to Love
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 1c2707cd3b003ca4c846d6af3455ce14, type: 3}
   image_name: Death to Love
   level_index: 0

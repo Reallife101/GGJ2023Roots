@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 using Unity.VisualScripting;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class GameManager : MonoBehaviour
     private Coroutine currentCoroutine;
     private bool loadingInProgess;
     private bool menuActive;
+    private int littleTreesUsed;
+    private int treesLeft;
     
 
     [Header("Menu Items")]
@@ -23,8 +26,11 @@ public class GameManager : MonoBehaviour
     public InputAction toggleMenu { get; private set; }
     public GameObject menu;
     public GameObject levelSelect;
+    public TMP_Text treesUsedtext;
+    public TMP_Text treesLeftText; 
     public LevelSelect levelSelector;
     public static GameManager gameManager;
+
 
     [SerializeField]
     AudioClip levelTransition;
@@ -41,7 +47,8 @@ public class GameManager : MonoBehaviour
         StopAllCoroutines();
         restart = input.Player.Restart;
         toggleMenu = input.Player.ToggleMenu;
-
+        littleTreesUsed = -1; 
+        
         restart.started += restartBehavior =>
         {
             if (loadingInProgess)
@@ -62,7 +69,6 @@ public class GameManager : MonoBehaviour
 
             menuActive = !menuActive;
             menu.SetActive(menuActive);
-
           
 
             if (menu.activeSelf)
@@ -75,15 +81,22 @@ public class GameManager : MonoBehaviour
             }
         };
 
+        treesLeft = GameObject.FindGameObjectWithTag("Player").GetComponent<TreeController>().numChildrenLeft + 1;
+
         if (gameManager == null)
         {
             gameManager = this;
             DontDestroyOnLoad(this);
         }
         else {
+            gameManager.treesLeft = treesLeft; 
+            gameManager.UpdateTreesLeft();
+            gameManager.UpdateTreesUsed();
             Destroy(this);
         }
 
+        UpdateTreesLeft();
+        UpdateTreesUsed();
 
     }
 
@@ -104,6 +117,16 @@ public class GameManager : MonoBehaviour
         currentCoroutine = StartCoroutine(LoadLevel(levelName));
 
     }
+
+
+    public void UpdateTreesUsed() {
+        treesUsedtext.text = $"{++littleTreesUsed}";
+    }
+
+    public void UpdateTreesLeft() {
+        treesLeftText.text = $"{--treesLeft}";
+    }
+
 
     public void NextLevel()
     {
@@ -156,7 +179,6 @@ public class GameManager : MonoBehaviour
         restart.Disable();
         toggleMenu.Disable();
     }
-
 
     public void Exit() {
         Debug.Log("QUITTING");

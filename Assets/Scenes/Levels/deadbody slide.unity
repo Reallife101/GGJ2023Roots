@@ -2046,7 +2046,7 @@ PrefabInstance:
     - target: {fileID: 5637720867960933091, guid: cd967b2c485dc5a459a2c9a1a2d5ff83, type: 3}
       propertyPath: onDefault.Array.data[1]
       value: 
-      objectReference: {fileID: 9212894498693862918}
+      objectReference: {fileID: 1368100748}
     - target: {fileID: 5917653925882654910, guid: cd967b2c485dc5a459a2c9a1a2d5ff83, type: 3}
       propertyPath: m_Name
       value: pressurePlate (1)

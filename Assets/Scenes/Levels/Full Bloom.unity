@@ -408,7 +408,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press Tab to see overview
+  m_text: Press Tab to toggle focus
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8cb8d38d6d8ce474493878f10d0d594c, type: 2}
   m_sharedMaterial: {fileID: 3483710349505472982, guid: 8cb8d38d6d8ce474493878f10d0d594c, type: 2}

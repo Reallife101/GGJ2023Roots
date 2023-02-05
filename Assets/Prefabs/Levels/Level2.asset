@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Level2
   m_EditorClassIdentifier: 
   image: {fileID: 4034366977457224824, guid: 368c36b20dcb7f14dad055d2003de626, type: 3}
-  image_name: SampleScene - Copy
-  level_index: 2
+  image_name: L2
+  level_index: 1

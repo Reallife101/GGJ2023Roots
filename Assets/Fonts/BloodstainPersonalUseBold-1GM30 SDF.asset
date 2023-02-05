@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: BloodstainPersonalUseBold-1GM30 SDF
   m_EditorClassIdentifier: 
-  hashCode: 0
+  hashCode: -1274490703
   material: {fileID: 3483710349505472982}
-  materialHashCode: 0
+  materialHashCode: -1648275983
   m_Version: 1.1.0
   m_SourceFontFileGUID: 7aa9c18816c38b740988e6c0c2035e2c
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 7aa9c18816c38b740988e6c0c2035e2c, type: 3}
@@ -1795,9 +1795,9 @@ Material:
     - _OutlineWidth: 0
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
-    - _ScaleRatioA: 1
-    - _ScaleRatioB: 1
-    - _ScaleRatioC: 1
+    - _ScaleRatioA: 0.8333333
+    - _ScaleRatioB: 0.6770833
+    - _ScaleRatioC: 0.6770833
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0

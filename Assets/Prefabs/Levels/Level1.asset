@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Level1
   m_EditorClassIdentifier: 
   image: {fileID: 2615002747431363965, guid: 136bb09d75abf0546a732c03e188568c, type: 3}
-  image_name: SampleScene
+  image_name: L1
   level_index: 0

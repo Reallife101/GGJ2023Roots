@@ -12,13 +12,23 @@ public class doorScript : MonoBehaviour
     [SerializeField]
     float openTime;
 
+    [SerializeField]
+    AudioClip open;
+    [SerializeField]
+    AudioClip close;
+
+    [SerializeField]
+    AudioSource au;
+
     public void openDoor()
     {
+        au.PlayOneShot(open, 1f);
         StartCoroutine("WaitAndEnable", openTime);
     }
 
     public void disableDoor()
     {
+        au.PlayOneShot(close, 1f);
         StartCoroutine("WaitAndDisable", openTime);
     }
 

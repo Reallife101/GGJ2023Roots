@@ -6,6 +6,9 @@ public class loadNextLevel : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().NextLevel();
+        if (collision.gameObject.name == "Player")
+        {
+            GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().NextLevel();
+        }
     }
 }

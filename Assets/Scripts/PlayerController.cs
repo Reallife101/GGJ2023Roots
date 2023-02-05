@@ -30,12 +30,23 @@ public class PlayerController : MonoBehaviour
     //Toogling Bool
     private bool isDisabled;
 
+    [SerializeField]
+    List<AudioClip> footsteps;
+
+    private int footstepCounter;
+    private AudioSource audioPlayer;
+    private float footstepTime;
+
     private void Awake()
     {
         myRB = GetComponent<Rigidbody2D>();
         input = new PlayerInputAsset();
         playerMove = input.Player.Move;
         playerJump = input.Player.Jump;
+
+        footstepCounter = 0;
+        footstepTime = 3f;
+        audioPlayer = GetComponent<AudioSource>();
 
         playerJump.started += jumpBehavior =>
         {
@@ -54,6 +65,19 @@ public class PlayerController : MonoBehaviour
         isDisabled = false;
     }
 
+    void playFootstep()
+    {
+        if (footstepTime > (footsteps[footstepCounter].length+0.15f))
+        {
+            audioPlayer.PlayOneShot(footsteps[footstepCounter], 1f);
+            footstepTime = 0;
+            footstepCounter += 1;
+            if (footstepCounter == footsteps.Count)
+            {
+                footstepCounter = 0;
+            }
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -67,6 +91,8 @@ public class PlayerController : MonoBehaviour
         RaycastHit2D resultL = Physics2D.Linecast(transform.position, groundedCheckObjectLeft.position, groundLayer);
         RaycastHit2D resultR = Physics2D.Linecast(transform.position, groundedCheckObjectRight.position, groundLayer);
         isGrounded = resultL || resultR;
+
+        footstepTime = footstepTime + Time.deltaTime;
 
         if (isGrounded)
         {
@@ -102,6 +128,7 @@ public class PlayerController : MonoBehaviour
         if (movementVector.x != 0)
         {
             transform.localScale = new Vector3(Mathf.Sign(movementVector.x), transform.localScale.y, transform.localScale.z);
+            playFootstep();
         }
         Vector3 VelocityChange = new Vector2(Time.fixedDeltaTime * moveSpeed * 10 * movementVector.x, myRB.velocity.y);
         myRB.velocity = Vector3.SmoothDamp(myRB.velocity, VelocityChange, ref StartVelocity, movementSmoothing);

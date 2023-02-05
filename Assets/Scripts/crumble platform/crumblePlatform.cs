@@ -12,13 +12,19 @@ public class crumblePlatform : MonoBehaviour
 
     private bool startDisable = false;
 
-    private float touchTime = 1f;
+    public float touchTime = 1f;
     private float respawnTime = 3f;
 
     [Header("Shake Values")]
     private Vector3 startPosition;
     [SerializeField] private float vibrationDistance;
     [SerializeField] private float delayBetweenVibrations;
+
+    [SerializeField]
+    AudioClip fall;
+
+    [SerializeField]
+    AudioSource au;
 
     private void Awake()
     {
@@ -30,6 +36,7 @@ public class crumblePlatform : MonoBehaviour
         if (!startDisable)
         {
             startDisable = true;
+            au.PlayOneShot(fall, 1f);
             StartCoroutine("WaitAndDisable", touchTime);
         }
     }

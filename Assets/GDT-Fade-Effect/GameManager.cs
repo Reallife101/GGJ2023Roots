@@ -24,7 +24,13 @@ public class GameManager : MonoBehaviour
     public GameObject menu;
     public GameObject levelSelect;
     public LevelSelect levelSelector;
-    public static GameManager gameManager; 
+    public static GameManager gameManager;
+
+    [SerializeField]
+    AudioClip levelTransition;
+
+    [SerializeField]
+    AudioSource au;
 
     private void Awake()
     {
@@ -124,6 +130,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator LoadLevel(string sceneToLoad)
     {
+        au.PlayOneShot(levelTransition, 1f);
         levelEndFade.SetActive(true);
         yield return new WaitForSeconds(levelEndFade.GetComponent<GDTFadeEffect>().timeEffect);
         SceneManager.LoadScene(sceneToLoad);

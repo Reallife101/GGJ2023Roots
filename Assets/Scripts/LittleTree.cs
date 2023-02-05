@@ -11,13 +11,18 @@ public class LittleTree : MonoBehaviour
     [SerializeField] private float rangeDistance;
     private GameObject parent;
 
+    [SerializeField]
+    AudioClip dieTree;
+
+    [SerializeField]
+    AudioSource au;
+
     // Start is called before the first frame update
     void Start()
     {
         //for when we need to use this later on
         //sprite = GetComponent<SpriteRenderer>();
         virtualCamera = GameObject.FindGameObjectWithTag("Cinemachine").GetComponent<CinemachineVirtualCamera>();
-        Debug.Log(virtualCamera);
 
     }
 
@@ -45,6 +50,9 @@ public class LittleTree : MonoBehaviour
             Destroy(littleTree);
         }
         else
+        {
+            au.PlayOneShot(dieTree, 1f);
             GetComponent<PlayerController>().Disable();
+        }
     }
 }

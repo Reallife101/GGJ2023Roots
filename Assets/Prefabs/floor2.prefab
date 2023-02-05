@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4387379254165270650}
   - component: {fileID: 2679798777953508877}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SteelBeam-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 6798700581218332657}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3406999340178099165}
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 4939d9c1a80693741b5f3b52e0f9fa04, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3406999340178099165}
   - component: {fileID: 3983317968553463935}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: floor2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,5 +141,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.4133334, y: 0.85333335}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0

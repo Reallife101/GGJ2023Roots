@@ -30,7 +30,7 @@ public class interactDoor : Interactable
 
     private void flipSwitch()
     {
-        au.PlayOneShot(ac, .95f);
+        au.PlayOneShot(ac, .8f);
         foreach (GameObject go in offDefault)
         {
             doorScript sd = go.GetComponent<doorScript>();

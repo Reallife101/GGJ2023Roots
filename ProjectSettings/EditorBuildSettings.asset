@@ -54,7 +54,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/RiseToTheOccasion.unity
     guid: 4b68fd6731845ee4f9b8c0b0ce34ebda
   - enabled: 1
-    path: Assets/Scenes/Levels/I Adrore Doors.unity
+    path: Assets/Scenes/Levels/I Adore Doors.unity
     guid: b6b76ce8f37c5b443b983a8309f79e1b
   - enabled: 1
     path: Assets/Scenes/Levels/Strike!.unity
@@ -71,4 +71,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Forge The Path.unity
     guid: 194bca7e9e5b5e540b9194adcc5a350c
+  - enabled: 1
+    path: Assets/Scenes/Levels/badEnd.unity
+    guid: 9a1aa76827227724cbafc32a9a19393a
+  - enabled: 1
+    path: Assets/Scenes/Levels/goodEnd.unity
+    guid: 9a736c429294058419e76980b693f2b1
   m_configObjects: {}

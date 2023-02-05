@@ -33,7 +33,7 @@ public class pressurePlate : MonoBehaviour
 
     private void flipSwitch()
     {
-        au.PlayOneShot(plate, 1f);
+        au.PlayOneShot(plate, .4f);
         foreach (GameObject go in offDefault)
         {
             doorScript sd = go.GetComponent<doorScript>();

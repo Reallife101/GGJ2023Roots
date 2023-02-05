@@ -17,6 +17,12 @@ public class TreeController : MonoBehaviour
 
     private bool spawned;
 
+    [SerializeField]
+    AudioClip spawnTree;
+
+    [SerializeField]
+    AudioSource au;
+
     void Start()
     {
         //I'm guessing we are going to need this when we switch between Big Tree Statue and normal Tree 
@@ -49,6 +55,7 @@ public class TreeController : MonoBehaviour
             ChangeSprite();
             spawnedLittleTree = Instantiate(littleTree, spawnPoint.position, Quaternion.identity);
             spawnedLittleTree.GetComponent<LittleTree>().setParent(gameObject);
+            au.PlayOneShot(spawnTree, 1f);
 
             if (virtualCamera != null)
             {

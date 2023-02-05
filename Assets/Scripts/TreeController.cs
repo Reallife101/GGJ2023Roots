@@ -4,12 +4,15 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using TMPro;
 
 public class TreeController : MonoBehaviour
 {
     [SerializeField] private GameObject littleTree;
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private CinemachineVirtualCamera virtualCamera;
+    [SerializeField] private TMP_Text treesLeft;
+    [SerializeField] private TMP_Text treesDead;
 
     public int numChildrenLeft;
 

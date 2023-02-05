@@ -2456,9 +2456,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 4
-  moveUnits: 12
+  moveUnits: 5
   moveSideWays: 0
-  playerOn: 1
+  playerOn: 0
   drop: 0
   notMove: 0
 --- !u!212 &860777608

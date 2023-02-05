@@ -32,20 +32,22 @@ public class LevelSelect : MonoBehaviour
 
 
     private void IndexCheckDisplay() {
-
         if (index == 0)
         {
             BtnDisplay(backBtn);
 
         }
-        else { 
+        else {
             if (!backBtn.activeInHierarchy)
                 BtnDisplay(backBtn);
-
+            
             if (index == levels.Count - 1)
             {
                 BtnDisplay(nextBtn);
-
+            }
+            else if (!nextBtn.activeInHierarchy)
+            {
+                BtnDisplay(nextBtn);
             }
                 
         }

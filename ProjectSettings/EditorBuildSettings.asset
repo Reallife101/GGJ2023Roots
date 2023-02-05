@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Falling Platforms.unity
     guid: 25691aaeb0609dc41b179ce2800af125
   - enabled: 1
-    path: Assets/Scenes/Levels/fallingPlatform1.unity
+    path: Assets/Scenes/Levels/Crumble and Tumble.unity
     guid: 1939d889737c30343b5b8b832d7ab831
   - enabled: 1
     path: Assets/Scenes/Levels/Forge The Path.unity
@@ -33,10 +33,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/On Thin Ice.unity
     guid: 1a12869c29a97d54cbb2b8434e3c7455
   - enabled: 1
-    path: Assets/Scenes/Levels/pressure switch 1.unity
+    path: Assets/Scenes/Levels/Pressure Lock.unity
     guid: f55ed77391e7ce24a97cb929d672e8f0
   - enabled: 1
-    path: Assets/Scenes/Levels/pressureFalling.unity
+    path: Assets/Scenes/Levels/Time to Move.unity
     guid: 866e0790daece4243ad9c927b7d2103a
   - enabled: 1
     path: Assets/Scenes/Levels/RiseToTheOccasion.unity
@@ -45,7 +45,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/SeeingDouble.unity
     guid: 885a74e568d3147419d1dca3ec817fe8
   - enabled: 1
-    path: Assets/Scenes/Levels/switch On.unity
+    path: Assets/Scenes/Levels/Top of the Head.unity
     guid: 47a56cf4a2bed8b44827a07cf1209524
   - enabled: 1
     path: Assets/Scenes/Levels/Switches1.unity
@@ -60,15 +60,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Through the Dark Twilight.unity
     guid: aa9efb0bfb4326a4ca822ee7cef05007
   - enabled: 1
-    path: Assets/Scenes/Levels/intro to flowers.unity
+    path: Assets/Scenes/Levels/Full Bloom.unity
     guid: f22010d6ee49fbe47b15560370683cc9
   - enabled: 1
-    path: Assets/Scenes/Levels/intro to shrivel.unity
+    path: Assets/Scenes/Levels/Death to Love.unity
     guid: 20d541cf649789b49be301f9b053074a
   - enabled: 1
-    path: Assets/Scenes/Levels/intro to doors.unity
+    path: Assets/Scenes/Levels/Waking up.unity
     guid: 265179f6db4f1c149a9837f68cc0a894
   - enabled: 1
-    path: Assets/Scenes/Levels/intro to children.unity
+    path: Assets/Scenes/Levels/A Door to Low.unity
     guid: 4fc2479542464dc4796a8e062fcb3802
   m_configObjects: {}

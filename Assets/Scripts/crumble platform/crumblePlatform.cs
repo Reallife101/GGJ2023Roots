@@ -12,7 +12,7 @@ public class crumblePlatform : MonoBehaviour
 
     private bool startDisable = false;
 
-    private float touchTime = 1f;
+    public float touchTime = 1f;
     private float respawnTime = 3f;
 
     [Header("Shake Values")]

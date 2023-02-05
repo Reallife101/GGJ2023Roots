@@ -25,7 +25,6 @@ public class LevelSelect : MonoBehaviour
 
 
     public void Select() {
-        Debug.Log("Selecting");
         GameManager.gameManager.LevelToLoad(levels[index].image_name);
     
     }

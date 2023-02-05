@@ -53,6 +53,8 @@ public class LittleTree : MonoBehaviour
         }
         else
         {
+            GameManager.gameManager.UpdateTreesUsed();
+            GameManager.gameManager.UpdateTreesLeft();
             au.PlayOneShot(dieTree, 1f);
             GetComponent<PlayerController>().Disable();
             ai.SetBool("dead", true);

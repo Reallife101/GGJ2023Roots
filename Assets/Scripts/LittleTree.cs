@@ -8,7 +8,9 @@ public class LittleTree : MonoBehaviour
     private float time = 50f;
     private SpriteRenderer sprite;
     [SerializeField] private CinemachineVirtualCamera virtualCamera;
+    [SerializeField] private float rangeDistance;
     private GameObject parent;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,19 +21,30 @@ public class LittleTree : MonoBehaviour
 
     }
 
+    public bool WithinDistance(Transform littleTreeTransform) {
+        return Mathf.Abs(parent.transform.position.magnitude - littleTreeTransform.position.magnitude) <
+                rangeDistance;   
+    }
+
     public void setParent(GameObject go)
     {
         parent = go;
     }
 
 
-    public void Despawn(GameObject litteTree) {
+    public void Despawn(GameObject littleTree) {
         //Debug.Log("Destroying Little Tree");
         if (virtualCamera != null)
         {
             virtualCamera.Follow = parent.transform;
         }
-        //Destroy(litteTree);
-        GetComponent<PlayerController>().Disable();
+
+        if (WithinDistance(littleTree.transform))
+        {
+            parent.GetComponent<TreeController>().incrementCount();
+            Destroy(littleTree);
+        }
+        else
+            GetComponent<PlayerController>().Disable();
     }
 }

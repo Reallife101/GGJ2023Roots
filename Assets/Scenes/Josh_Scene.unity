@@ -473,6 +473,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prepack
       objectReference: {fileID: 0}
+    - target: {fileID: 4592906846242759889, guid: 9dd1aa3a8440a254cb395d3ed345abf8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -250.48
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9dd1aa3a8440a254cb395d3ed345abf8, type: 3}
 --- !u!1 &504614813

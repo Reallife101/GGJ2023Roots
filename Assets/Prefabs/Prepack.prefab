@@ -3088,6 +3088,7 @@ MonoBehaviour:
   level_name: {fileID: 7652947048361116957}
   backBtn: {fileID: 8003348086993616403}
   nextBtn: {fileID: 6171260903295726610}
+  manager: {fileID: 4592906845734614131}
 --- !u!1 &8589250013540467587
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ public class LevelSelect : MonoBehaviour
     [SerializeField] private TMP_Text level_name;
     [SerializeField] private GameObject backBtn;
     [SerializeField] private GameObject nextBtn;
+    [SerializeField] GameManager manager;
 
     private int index;
 
@@ -25,7 +26,7 @@ public class LevelSelect : MonoBehaviour
 
 
     public void Select() {
-        GameManager.gameManager.LevelToLoad(levels[index].image_name);
+        manager.LevelToLoad(levels[index].image_name);
     
     }
 

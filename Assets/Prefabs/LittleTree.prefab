@@ -166,8 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   virtualCamera: {fileID: 0}
-  rangeDistance: 50
-  rangeYdistance: 0
+  rangeDistance: 1
 --- !u!114 &-8067857023690319118
 MonoBehaviour:
   m_ObjectHideFlags: 0

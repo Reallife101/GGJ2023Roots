@@ -37,12 +37,18 @@ public class PlayerController : MonoBehaviour
     private AudioSource audioPlayer;
     private float footstepTime;
 
+    private Animator ai;
+    private SpriteRenderer sr;
+
     private void Awake()
     {
         myRB = GetComponent<Rigidbody2D>();
         input = new PlayerInputAsset();
         playerMove = input.Player.Move;
         playerJump = input.Player.Jump;
+
+        ai = GetComponent<Animator>();
+        sr = GetComponent<SpriteRenderer>();
 
         footstepCounter = 0;
         footstepTime = 3f;
@@ -125,11 +131,13 @@ public class PlayerController : MonoBehaviour
 
         //Grounded movement
         movementVector = playerMove.ReadValue<Vector2>();
+        ai.SetFloat("xVelocity", Mathf.Abs(movementVector.x));
         if (movementVector.x != 0)
         {
             transform.localScale = new Vector3(Mathf.Sign(movementVector.x), transform.localScale.y, transform.localScale.z);
             playFootstep();
         }
+            
         Vector3 VelocityChange = new Vector2(Time.fixedDeltaTime * moveSpeed * 10 * movementVector.x, myRB.velocity.y);
         myRB.velocity = Vector3.SmoothDamp(myRB.velocity, VelocityChange, ref StartVelocity, movementSmoothing);
 

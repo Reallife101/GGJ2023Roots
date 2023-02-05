@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
         RaycastHit2D resultL = Physics2D.Linecast(transform.position, groundedCheckObjectLeft.position, groundLayer);
         RaycastHit2D resultR = Physics2D.Linecast(transform.position, groundedCheckObjectRight.position, groundLayer);
         isGrounded = resultL || resultR;
@@ -96,6 +96,7 @@ public class PlayerController : MonoBehaviour
 
         if (isGrounded)
         {
+            
             if (transform.parent != resultL.transform && transform.parent != resultR.transform)
             {
                 transform.parent = null;

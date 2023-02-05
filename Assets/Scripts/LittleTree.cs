@@ -17,12 +17,14 @@ public class LittleTree : MonoBehaviour
     [SerializeField]
     AudioSource au;
 
+    private Animator ai;
     // Start is called before the first frame update
     void Start()
     {
         //for when we need to use this later on
         //sprite = GetComponent<SpriteRenderer>();
         virtualCamera = GameObject.FindGameObjectWithTag("Cinemachine").GetComponent<CinemachineVirtualCamera>();
+        ai = GetComponent<Animator>();
 
     }
 
@@ -53,6 +55,7 @@ public class LittleTree : MonoBehaviour
         {
             au.PlayOneShot(dieTree, 1f);
             GetComponent<PlayerController>().Disable();
+            ai.SetBool("dead", true);
         }
     }
 }

@@ -2956,7 +2956,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ad766d61339c9e428c457419c631f8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathCount: 0
+  deathCount: 69
 --- !u!1 &5219821470188282350
 GameObject:
   m_ObjectHideFlags: 3

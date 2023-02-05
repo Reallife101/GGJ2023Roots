@@ -10,7 +10,11 @@ public class loadgoodorbad : MonoBehaviour
     {
         if (UIManager.UImanager.deathCount > deathCount)
         {
-
+            SceneManager.LoadScene("badEnd");
+        }
+        else
+        {
+            SceneManager.LoadScene("goodEnd");
         }
     }
 }

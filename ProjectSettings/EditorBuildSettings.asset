@@ -59,4 +59,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Through the Dark Twilight.unity
     guid: aa9efb0bfb4326a4ca822ee7cef05007
+  - enabled: 1
+    path: Assets/Scenes/Levels/intro to flowers.unity
+    guid: f22010d6ee49fbe47b15560370683cc9
+  - enabled: 1
+    path: Assets/Scenes/Levels/intro to shrivel.unity
+    guid: 20d541cf649789b49be301f9b053074a
+  - enabled: 1
+    path: Assets/Scenes/Levels/intro to doors.unity
+    guid: 265179f6db4f1c149a9837f68cc0a894
+  - enabled: 1
+    path: Assets/Scenes/Levels/intro to children.unity
+    guid: 4fc2479542464dc4796a8e062fcb3802
   m_configObjects: {}
